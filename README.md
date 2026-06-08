@@ -1,15 +1,17 @@
-<h1 align="center">
+<div align="center">
 <img src="./images/logo.png" alt="LightningSave" width="128" /><br />
-LightningSave
-</h1>
 
-<p align="center">快速保存在线图片到Telegram频道。<br /></p>
+**快速保存在线图片到Telegram频道**
+
+![License](https://img.shields.io/github/license/yzl3014/lightningsave)
+
+</div>
 
 ## 预览
 
 |命令行|Telegram|
 | --- | ------ |
-| ![](./images/screenshot_0.1.0_cli.png) | ![](./images/screenshot_0.1.0_tg.png) |
+| ![命令行输出](./images/screenshot_0.1.0_cli.png) | ![Telegram消息](./images/screenshot_0.1.0_tg.png) |
 
 图片中的作品：https://www.pixiv.net/artworks/145539268
 
@@ -22,11 +24,10 @@ LightningSave
 当前受支持的平台：
 - Pixiv: `https://www.pixiv.net/artworks/{id}` 支持单张、多张图片和 Ugoira 动图。
 
-
 ## 使用
 
 > [!NOTE]
-> 本项目正处于Beta测试阶段（版本号为`0.x.x`）。如发生故障请发布至[issues](/issues)。
+> 本项目正处于Beta测试阶段（版本号为`0.x.x`）。如发生故障请发布至issues。
 
 ### 1. 准备工作
 
@@ -58,7 +59,6 @@ npm install
 ### 3. 环境变量
 
 等待依赖安装完毕后，根据下方要求修改`.env.example`，并将其重命名为`.env`。等号后面的值要加双引号。
-
 ```text
 BotToken="{Telegram Bot的Token}"
 ChannelId="{图片将发送至此频道}"
@@ -67,7 +67,7 @@ Cookies="{当前版本仅需Pixiv.net的cookie}"
 
 `BotToken`：在 Telegram 中搜索 [BotFather](https://t.me/BotFather)，点击“打开”，跟随页面提示来创建Bot。然后点击“Copy”复制Token。
 
-| ![](./images/guide_botfather1.png) | ![](./images/guide_botfather2.png) |
+| ![创建Telegram Bot](./images/guide_botfather1.png) | ![复制Token](./images/guide_botfather2.png) |
 | -- | -- |
 
 
@@ -80,7 +80,7 @@ Cookies="{当前版本仅需Pixiv.net的cookie}"
 
 安全起见，不要将这段文本放在公开场合。
 
-|![](./images/guide_get_cookies.png)|
+|![利用Chrome扩展取得Cookies](./images/guide_get_cookies.png)|
 | -- |
 
 ### 4. 持久化运行
