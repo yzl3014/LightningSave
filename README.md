@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./images/logo.png" alt="LightningSave" width="128" /><br />
+<img src="./images/logo.svg" alt="LightningSave" height="256" /><br />
 
 **快速保存在线图片到Telegram频道**
 
@@ -18,8 +18,6 @@
 ## 特点
 
 本项目为了保存 Pixiv 图片而设计。用户给 Telegram Bot 发送一个链接，Bot 能够自动提取有效信息、下载和处理图片、将图片发送至指定 Telegram 频道。
-
-图片下载接口由 [pixiv.cat](https://pixiv.cat/) 提供。
 
 当前受支持的平台：
 - Pixiv: `https://www.pixiv.net/artworks/{id}` 支持单张、多张图片和 Ugoira 动图。
@@ -91,6 +89,13 @@ Cookies="{当前版本仅需Pixiv.net的cookie}"
 npm install -g pm2
 pm2 start main.js --name "LightningSave"
 ```
+
+## 资源
+
+图片下载接口由 [pixiv.cat](https://pixiv.cat/) 提供
+
+Logo字体为 [Racing Sans One](https://fonts.google.com/specimen/Racing+Sans+One)
+
 
 ## License
 
