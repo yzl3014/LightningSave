@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./images/logo.svg" alt="LightningSave" height="256" /><br />
+<img src="./images/logo.svg" alt="LightningSave" width="512" /><br />
 
 **快速保存在线图片到Telegram频道**
 
