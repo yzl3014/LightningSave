@@ -17,10 +17,13 @@
 
 ## 特点
 
-本项目为了保存 Pixiv 图片而设计。用户给 Telegram Bot 发送一个链接，Bot 能够自动提取有效信息、下载和处理图片、将图片发送至指定 Telegram 频道。
+本项目为了保存 Pixiv 图片而设计。用户给 Telegram Bot 发送一个URL，Bot 能够自动提取有效信息、下载和处理图片、将图片发送至指定 Telegram 频道。
 
-当前受支持的平台：
+当前受支持的平台及URL格式：
 - Pixiv: `https://www.pixiv.net/artworks/{id}` 支持单张、多张图片和 Ugoira 动图。
+
+指令：
+- `/clean`: 删除运行目录下的`pix_ugoira`和`temp`文件夹。前者包含以前下载过的ugoria动图，后者是合成动图时产生的临时文件。如果动图已经全部上传至Telegram，则可以删除。
 
 ## 使用
 
@@ -30,7 +33,7 @@
 ### 1. 准备工作
 
 > [!IMPORTANT]  
-> 请确保运行程序的设备能够正常访问下列网址：
+> 请确保运行程序的设备能够正常访问下列网址:
 > - api.telegram.org
 > - pixiv.net
 > - i.pixiv.re
@@ -63,16 +66,16 @@ ChannelId="{图片将发送至此频道}"
 Cookies="{当前版本仅需Pixiv.net的cookie}"
 ```
 
-`BotToken`：在 Telegram 中搜索 [BotFather](https://t.me/BotFather)，点击“打开”，跟随页面提示来创建Bot。然后点击“Copy”复制Token。
+`BotToken`: 在 Telegram 中搜索 [BotFather](https://t.me/BotFather)，点击“打开”，跟随页面提示来创建Bot。然后点击“Copy”复制Token。然后将这个 Bot 添加为`ChannelId`对应频道的管理员。
 
-| ![创建Telegram Bot](./images/guide_botfather1.png) | ![复制Token](./images/guide_botfather2.png) |
-| -- | -- |
-
-
-`ChannelId`：所有图片都将发送至此频道，但报错信息会通过私信发送。使用 [userinfobot](https://t.me/userinfobot) 获取频道ID。
+| ![创建Telegram Bot](./images/guide_botfather1.png) | ![复制Token](./images/guide_botfather2.png) | ![将Bot设置为频道管理员](./images/guide_bot_setting.png)
+| -- | -- | -- |
 
 
-`Cookies`：在Chrome浏览器中安装 [Get cookies.txt LOCALLY](https://chromewebstore.google.com/detail/cclelndahbckbenkjhflpdbgdldlbecc) 扩展。打开 [Pixiv](https://www.pixiv.net/) ，登录账号。
+`ChannelId`: 所有图片都将发送至此频道，但报错信息会通过私信发送。使用 [userinfobot](https://t.me/userinfobot) 获取频道ID。
+
+
+`Cookies`: 在Chrome浏览器中安装 [Get cookies.txt LOCALLY](https://chromewebstore.google.com/detail/cclelndahbckbenkjhflpdbgdldlbecc) 扩展。打开 [Pixiv](https://www.pixiv.net/) ，登录账号。
 
 随后点击浏览器右上角的扩展图标。首先将`Export Format`改为`Header String`，然后点击`Copy`复制，如下图。
 
